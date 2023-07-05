@@ -1,4 +1,5 @@
 require './lib/cards'
+require './lib/deck'
 
 
 
@@ -6,6 +7,12 @@ card1 = Card.new(:diamond, "Queen", 12)
 card2 = Card.new(:heart, "Ace", 14)
 card3 = Card.new(:spade, "3", 3)
 
-puts card1
-puts card2 
-puts card3
+# p card1
+# p card2 
+# p card3
+
+cards = [card1, card2, card3]
+
+deck = Deck.new(cards)
+
+p deck.cards
