@@ -15,13 +15,18 @@ class Deck
     end
 
 
-    def high_ranking_cards
+    def high_ranking_cards(deck)
 
-        cards.select {|card| card.rank >= 11}
+        high_cards = []
+        @cards.each do |card|
+            if card.rank >= 11
+                high_card << card
+            end
+        end
 
     end
 
-    
+
     def add_card(card)
 
         @cards.push(card)
